@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, depend_on_referenced_packages, dead_code, unused_label
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:scr/Login.dart';
+import 'package:scr/SignUp.dart';
 import 'package:scr/WelcomeScreen.dart';
 
 void main ()
@@ -29,7 +31,12 @@ class _HomeScreenState extends State<HomeScreen>
       return MaterialApp
       (
         debugShowCheckedModeBanner: false,
-        home : WelcomeScreen()
+        home : WelcomeScreen(),
+        routes: 
+        {
+          '/signup': (context) => SignUp(),
+          '/login' : (context) => Login(),
+        },
       );
     },
     );

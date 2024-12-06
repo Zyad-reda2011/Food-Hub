@@ -38,7 +38,7 @@ class _splashScreenState extends State<splashScreen>
       backgroundColor:Color(0xffFE724C),
       body: Padding
       (  
-        padding: const EdgeInsets.only(bottom: 15),
+        padding: const EdgeInsets.all(10.0),
         child: Column
         (
           children: 
@@ -50,8 +50,7 @@ class _splashScreenState extends State<splashScreen>
               child: Image.asset("assets/Group-18118.png"),
             )
           ),
-          const Text("developed by StarMan inc." , style: (TextStyle(color:Colors.grey,fontStyle:FontStyle.italic)))
-        ],
+        ],        
         ),
       ),
     );

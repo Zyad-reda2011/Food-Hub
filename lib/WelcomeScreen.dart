@@ -28,7 +28,7 @@ class WelcomeScreen extends StatelessWidget
           ),
           Padding
           (
-            padding: const EdgeInsets.symmetric(horizontal: 40.0  , vertical: 70.0),
+            padding: const EdgeInsets.symmetric(horizontal: 15.0  , vertical: 15.0),
             child: Column
             (
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -41,7 +41,7 @@ class WelcomeScreen extends StatelessWidget
                   child: TextButton
                   (
                     onPressed: (){}, 
-                    child: const Text("Skip" , style:TextStyle(color: Color(0xffFE724C), fontSize: 14 , fontFamily: "Sofia Pro" ),) 
+                    child: const Text("Skip" , style:TextStyle(color: Color(0xffFE724C), fontSize: 12 , fontFamily: "Sofia Pro" ),) 
                   ),
                 ),
                 const Spacer(),
@@ -49,14 +49,14 @@ class WelcomeScreen extends StatelessWidget
                  const Text
                 (
                   "Welcome to",
-                  style: TextStyle(color: Colors.black , fontWeight: FontWeight.bold , fontFamily: "Sofia Pro" , fontSize: 90),
+                  style: TextStyle(color: Colors.black , fontWeight: FontWeight.bold , fontFamily: "Sofia Pro" , fontSize: 48),
                   textAlign : TextAlign.left,
                 ),
                 // FoodHub
                 const Text
                 (
                   "FoodHub",
-                  style: TextStyle(color: Color(0xffFE724C) , fontWeight: FontWeight.bold , fontFamily: "Sofia Pro" , fontSize: 90),
+                  style: TextStyle(color: Color(0xffFE724C) , fontWeight: FontWeight.bold , fontFamily: "Sofia Pro" , fontSize: 48),
                   textAlign : TextAlign.left,
                 ),
                 const SizedBox(height: 10,),
@@ -64,13 +64,13 @@ class WelcomeScreen extends StatelessWidget
                  const Text
                 (
                   "Your favourite foods delivered",
-                  style: TextStyle(color: Color(0xff30384F), fontFamily: "Sofia Pro", fontWeight: FontWeight.normal , fontSize: 24),
+                  style: TextStyle(color: Color(0xff30384F), fontFamily: "Sofia Pro", fontWeight: FontWeight.normal , fontSize: 20),
                   textAlign : TextAlign.left,
                 ),
                 const Text
                 (
                   "fast at your door.",
-                  style: TextStyle(color: Color(0xff30384F), fontFamily: "Sofia Pro" , fontWeight: FontWeight.normal , fontSize: 24),
+                  style: TextStyle(color: Color(0xff30384F), fontFamily: "Sofia Pro" , fontWeight: FontWeight.normal , fontSize: 20),
                   textAlign : TextAlign.left,
                 ),
                 const Spacer(),
@@ -145,13 +145,19 @@ class WelcomeScreen extends StatelessWidget
                 const SizedBox(height: 10,),
                 OutlinedButton
                 (
-                  onPressed: (){},
+                  onPressed: ()
+                  {
+                    Navigator.pushNamed(context, '/signup');
+                  },
                   child: const Text("Start with E-Mail or phone" , style: TextStyle(fontFamily: "Sofia Pro" , color: Colors.black ,fontWeight: FontWeight.normal))  
                 ),
                 const SizedBox(height: 10,),
                 TextButton
                 (
-                  onPressed: (){},
+                  onPressed: ()
+                  {
+                    Navigator.pushNamed(context, '/login');
+                  },
                   child: 
                   const Text.rich
                   (
