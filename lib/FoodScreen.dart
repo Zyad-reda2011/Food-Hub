@@ -16,13 +16,15 @@ class FoodScreen extends StatelessWidget
       appBar: 
       AppBar
       (
+        centerTitle: true,
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         leading: const Icon(Icons.menu , color: Colors.black,),
         title: 
         const Column
         (
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: 
           [
             Text
@@ -79,9 +81,10 @@ class FoodScreen extends StatelessWidget
               color: Colors.black,
               fontWeight: FontWeight.bold,
               fontFamily: "Sofia Pro",
-              fontSize: 48
+              fontSize: 40
             ),
           ),
+          const SizedBox(height: 15,),
           // Bar Search-->
           Container
           (
@@ -106,6 +109,13 @@ class FoodScreen extends StatelessWidget
                     decoration: InputDecoration
                     (
                       hintText: 'Find for Food or Restaraunt...',
+                      hintStyle: TextStyle
+                      (
+                        color: Colors.grey,
+                        fontWeight: FontWeight.normal,
+                        fontFamily: "Sofia Pro",
+                        fontSize: 16
+                      )
                     ),
                   )
                 ),
@@ -131,7 +141,7 @@ class FoodScreen extends StatelessWidget
               ],
             ),
           ),
-          const SizedBox(height: 24,),
+          const SizedBox(height: 30,),
           ///////////// Featured Restraunts Section
           const Row
           (
@@ -143,10 +153,10 @@ class FoodScreen extends StatelessWidget
                 'Featured Restraunts',
                 style: TextStyle
                 (
-                  color: Colors.black,
+                  color: Color.fromARGB(255, 30, 24, 82),
                   fontWeight: FontWeight.bold,
                   fontFamily: "Sofia Pro",
-                  fontSize: 18
+                  fontSize: 24
                 ),
               ),
               Text
@@ -157,7 +167,7 @@ class FoodScreen extends StatelessWidget
                   color: Color(0xffFE724C),
                   fontWeight: FontWeight.normal,
                   fontFamily: "Sofia Pro",
-                  fontSize: 13
+                  fontSize: 18
                 ),
               )
             ],
@@ -193,7 +203,6 @@ class FoodScreen extends StatelessWidget
               BottomNavigationBarItem(icon: Image.asset('assets/bell.png') , label: ""),
             ] 
           )
-          
         ],
       ) ,
     );

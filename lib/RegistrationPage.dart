@@ -205,35 +205,36 @@ class _RegistrationpageState extends State<Registrationpage>
                         ),
                       )
                     ),
-                    const SizedBox(width: 10),
-                    ElevatedButton
-                    (
-                      onPressed: () 
-                      {
-                        Navigator.pushNamed(context, '/Food');
-                      },
-                      style: ElevatedButton.styleFrom
-                      (
-                        backgroundColor: Colors.orange,
-                        shape: RoundedRectangleBorder
-                        (
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        padding:
-                        const EdgeInsets.symmetric(vertical: 15, horizontal: 100),
-                      ),
-                      child: const Text
-                      (
-                        'SEND',
-                        style: TextStyle
-                        (
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      )
-                    )
+                    const SizedBox(width: 10),             
                   ]
+                ),
+                const SizedBox(height: 20,),
+                ElevatedButton
+                (
+                  onPressed: () 
+                  {
+                    Navigator.pushNamed(context, '/Food');
+                  },
+                  style: ElevatedButton.styleFrom
+                  (
+                    backgroundColor: Colors.orange,
+                    shape: RoundedRectangleBorder
+                    (
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    padding:
+                    const EdgeInsets.symmetric(vertical: 15, horizontal: 125),
+                  ),
+                  child: const Text
+                  (
+                    'SEND',
+                    style: TextStyle
+                    (
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  )
                 )
               ]
             )

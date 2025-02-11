@@ -25,7 +25,7 @@ class CategoryCard extends StatelessWidget
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration
       (
-        color: isSelected ? const Color(0xffFE724C) : const Color(0xff8C9099),
+        color: isSelected ? const Color(0xffFE724C) : const Color.fromARGB(255, 255, 255, 255),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column
