@@ -1,4 +1,4 @@
-# scr
+# FoodHub
 
 A new Flutter project.
 
