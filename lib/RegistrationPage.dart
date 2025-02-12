@@ -90,155 +90,161 @@ class _RegistrationpageState extends State<Registrationpage>
               fit: BoxFit.fill,
             )
           ),
-          Padding
+          SafeArea
           (
-            padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
-            child:
-            Column
+            child: SingleChildScrollView
             (
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start, 
-              children: 
-              [
-                const SizedBox(height: 10,),
-                Container
+              child: Padding
+              (
+                padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
+                child:
+                Column
                 (
-                  decoration: BoxDecoration
-                  (
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20)
-                  ),
-                  child: IconButton
-                  (
-                    onPressed: ()
-                    {
-                      Navigator.pushNamed(context, '/login');
-                    }, 
-                    icon: const Icon(Icons.arrow_back_ios_new)
-                  ),
-                ),
-                const SizedBox(height: 20,),
-                const Text
-                (
-                  // Registration Word
-                  "Registration",
-                  style: TextStyle
-                  (
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Sofia Pro",
-                    fontSize: 48
-                  ),
-                  textAlign: TextAlign.left,
-                ),
-                const SizedBox(height: 10),
-                const Text
-                (
-                  "Enter your Phone number to verify",
-                  style: TextStyle
-                  (
-                    color: Color(0xff9796A1),
-                    fontWeight: FontWeight.normal,
-                    fontFamily: "Sofia Pro",
-                    fontSize: 16
-                  ),
-                ),
-                const Text
-                (
-                  "Your Acount",
-                  style: TextStyle
-                  (
-                    color: Color(0xff9796A1),
-                    fontWeight: FontWeight.normal,
-                    fontFamily: "Sofia Pro",
-                    fontSize: 16
-                  ),
-                ),
-                const SizedBox(height: 10,),
-                Row
-                (
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start, 
                   children: 
                   [
-                    Expanded
+                    const SizedBox(height: 10,),
+                    Container
                     (
-                      child: TextField
+                      decoration: BoxDecoration
                       (
-                        keyboardType: TextInputType.phone,
-                        controller: _phoneNumberController,
-                        decoration: InputDecoration
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: IconButton
+                      (
+                        onPressed: ()
+                        {
+                          Navigator.pushNamed(context, '/login');
+                        }, 
+                        icon: const Icon(Icons.arrow_back_ios_new)
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+                    const Text
+                    (
+                      // Registration Word
+                      "Registration",
+                      style: TextStyle
+                      (
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Sofia Pro",
+                        fontSize: 48
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    const SizedBox(height: 10),
+                    const Text
+                    (
+                      "Enter your Phone number to verify",
+                      style: TextStyle
+                      (
+                        color: Color(0xff9796A1),
+                        fontWeight: FontWeight.normal,
+                        fontFamily: "Sofia Pro",
+                        fontSize: 16
+                      ),
+                    ),
+                    const Text
+                    (
+                      "Your Acount",
+                      style: TextStyle
+                      (
+                        color: Color(0xff9796A1),
+                        fontWeight: FontWeight.normal,
+                        fontFamily: "Sofia Pro",
+                        fontSize: 16
+                      ),
+                    ),
+                    const SizedBox(height: 10,),
+                    Row
+                    (
+                      children: 
+                      [
+                        Expanded
                         (
-                          prefixIcon: Padding
+                          child: TextField
                           (
-                            padding: const EdgeInsets.only(left: 10),
-                            child: SizedBox
+                            keyboardType: TextInputType.phone,
+                            controller: _phoneNumberController,
+                            decoration: InputDecoration
                             (
-                              height: 50,
-                              width: 80,
-                              child: GestureDetector
+                              prefixIcon: Padding
                               (
-                                onTap: () => _openCountryPicker(context),
-                                child: Row
+                                padding: const EdgeInsets.only(left: 10),
+                                child: SizedBox
                                 (
-                                  children: 
-                                  [
-                                    CountryPickerUtils.getDefaultFlagImage(_selectedCountry),
-                                    const SizedBox(width: 8),
-                                    const Icon
+                                  height: 50,
+                                  width: 80,
+                                  child: GestureDetector
+                                  (
+                                    onTap: () => _openCountryPicker(context),
+                                    child: Row
                                     (
-                                      Icons.arrow_drop_down_sharp,
-                                      color: Colors.grey,
-                                    )
-                                  ],
+                                      children: 
+                                      [
+                                        CountryPickerUtils.getDefaultFlagImage(_selectedCountry),
+                                        const SizedBox(width: 8),
+                                        const Icon
+                                        (
+                                          Icons.arrow_drop_down_sharp,
+                                          color: Colors.grey,
+                                        )
+                                      ],
+                                    ),
+                                  ),
                                 ),
                               ),
+                              border: OutlineInputBorder
+                              (
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              focusedBorder: OutlineInputBorder
+                              (
+                                borderRadius: BorderRadius.circular(16),
+                                borderSide: const BorderSide(color: Colors.orange)
+                              ),
                             ),
-                          ),
-                          border: OutlineInputBorder
-                          (
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          focusedBorder: OutlineInputBorder
-                          (
-                            borderRadius: BorderRadius.circular(16),
-                            borderSide: const BorderSide(color: Colors.orange)
-                          ),
+                          )
+                        ),
+                        const SizedBox(width: 10),             
+                      ]
+                    ),
+                    const SizedBox(height: 20,),
+                    ElevatedButton
+                    (
+                      onPressed: () 
+                      {
+                        Navigator.pushNamed(context, '/Food');
+                      },
+                      style: ElevatedButton.styleFrom
+                      (
+                        backgroundColor: Colors.orange,
+                        shape: RoundedRectangleBorder
+                        (
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        padding:
+                        const EdgeInsets.symmetric(vertical: 15, horizontal: 125),
+                      ),
+                      child: const Text
+                      (
+                        'SEND',
+                        style: TextStyle
+                        (
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       )
-                    ),
-                    const SizedBox(width: 10),             
+                    )
                   ]
-                ),
-                const SizedBox(height: 20,),
-                ElevatedButton
-                (
-                  onPressed: () 
-                  {
-                    Navigator.pushNamed(context, '/Food');
-                  },
-                  style: ElevatedButton.styleFrom
-                  (
-                    backgroundColor: Colors.orange,
-                    shape: RoundedRectangleBorder
-                    (
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    padding:
-                    const EdgeInsets.symmetric(vertical: 15, horizontal: 125),
-                  ),
-                  child: const Text
-                  (
-                    'SEND',
-                    style: TextStyle
-                    (
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  )
                 )
-              ]
-            )
-         )
+              ),
+            ),
+          )
        ]
       )
     );
