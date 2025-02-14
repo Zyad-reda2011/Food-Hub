@@ -43,8 +43,9 @@ class FeaturedRestrauntCard extends StatelessWidget
           )
         ],
       ),
-      child: Row
+      child: Column
       (
+        mainAxisSize: MainAxisSize.min,
         children: 
         [
           ClipRRect
@@ -60,7 +61,7 @@ class FeaturedRestrauntCard extends StatelessWidget
             ) ,
           ),
           const SizedBox(width: 12),
-          Expanded
+          Flexible
           (
             child: Column
             (

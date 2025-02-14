@@ -24,7 +24,6 @@ class FoodScreen extends StatelessWidget
         const Column
         (
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
           children: 
           [
             Text
@@ -204,7 +203,8 @@ class FoodScreen extends StatelessWidget
             ] 
           )
         ],
-      ) ,
+      ),
+      
     );
   }
 }
