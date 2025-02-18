@@ -188,23 +188,23 @@ class FoodScreen extends StatelessWidget
             foodTags: const ['BURGER' , 'FAST FOOD'], 
             time: '20-30 mins'
           ),
-          BottomNavigationBar
-          (
-            unselectedItemColor: Colors.grey,
-            selectedItemColor: const Color(0xffFE724C),
-            currentIndex: 0,
-            items: 
-            [
-              BottomNavigationBarItem(icon: Image.asset('assets/compass.png') , label: ""),
-              BottomNavigationBarItem(icon: Image.asset('assets/map.png') , label: ""),
-              BottomNavigationBarItem(icon: Image.asset('assets/bag.png') , label: ""),
-              BottomNavigationBarItem(icon: Image.asset('assets/love.png') , label: ""),
-              BottomNavigationBarItem(icon: Image.asset('assets/bell.png') , label: ""),
-            ] 
-          )
         ],
       ),
-      
+      bottomNavigationBar:  BottomNavigationBar
+      (
+        type: BottomNavigationBarType.fixed,
+        unselectedItemColor: Colors.grey,
+        selectedItemColor: const Color(0xffFE724C),
+        currentIndex: 0,
+        items: 
+        [
+          BottomNavigationBarItem(icon: Image.asset('assets/compass.png') , label: ""),
+          BottomNavigationBarItem(icon: Image.asset('assets/map.png') , label: ""),
+          BottomNavigationBarItem(icon: Image.asset('assets/bag.png') , label: ""),
+          BottomNavigationBarItem(icon: Image.asset('assets/love.png') , label: ""),
+          BottomNavigationBarItem(icon: Image.asset('assets/bell.png') , label: ""),
+        ] 
+      )
     );
   }
 }
